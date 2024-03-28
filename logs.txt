@@ -1,0 +1,36 @@
+$ git log
+commit 8a47dcd7c8efb6df31fe557583f7dca5c85476c5 (HEAD -> master, origin/master, origin/bug2, bug2)
+Author: DamjanSandev <frank.nords@protonmail.com>
+Date:   Thu Mar 28 21:38:14 2024 +0100
+
+    Call method makeBigStringFrom in main class
+
+commit 1a62038ff7b86288c45bc3ba1a14bf472b80779d
+Author: DamjanSandev <frank.nords@protonmail.com>
+Date:   Thu Mar 28 21:35:05 2024 +0100
+
+    Fix wrong condition in makeBigStringFrom
+
+commit 46c96abf53cad8a5d518c300d98f9136ad6c6764 (origin/bug1, bug1)
+Author: DamjanSandev <frank.nords@protonmail.com>
+Date:   Thu Mar 28 21:36:30 2024 +0100
+
+    Call method filterOddLengthStrings in main class
+
+commit 06c26b8b9079e2a027f8f95a2c3538d7b9816e09
+Author: DamjanSandev <frank.nords@protonmail.com>
+Date:   Thu Mar 28 21:34:14 2024 +0100
+
+    Fix wrong condition in filterOddLengthStrings
+
+commit 3c1a4e4874658f11d12005e295eb7edc08c22440
+Author: DamjanSandev <frank.nords@protonmail.com>
+Date:   Thu Mar 28 21:30:54 2024 +0100
+
+    Add starter code
+
+commit 0ad9bfaf08cb8204af44e4a88d9f9b6aa0d91a5e
+Author: DamjanSandev <frank.nords@protonmail.com>
+Date:   Thu Mar 28 21:25:22 2024 +0100
+
+    Initial commit

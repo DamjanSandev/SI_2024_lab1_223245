@@ -1,0 +1,199 @@
+1. Veke imav github account
+2. Beshe main go promeniv vo master
+3. Kreiran
+4. so komanda mkdir SI_2024_lab1_223245 kreirav lokalen direktorium i go inicijalizirav so komandata git init
+
+5. git remote add origin https://github.com/DamjanSandev/SI_2024_lab1_223245.git
+so ovaa komanda go povrzav istoimenoto remote repo so lokalnoto 
+
+6. nano README.md ja kreirav datotekata i so komanda:
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (master)
+$ git add README.md
+$ git commit -m "Initial Commit"
+
+7.git add . 
+  git commit -m "Add starter code"
+
+8. git push -u origin master
+
+9. git branch bug1
+   git branch bug2
+10. git checkout bug1
+11. nano SILab1_1.java
+    git add SILab1_1.java
+   dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug1)
+$ git commit -m "Fix wrong condition in filterOddLengthStrings"
+
+12.git checkout bug2
+13. dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2)
+$ nano SILab1_2.java
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2)
+$ git add SILab1_2.java
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2)
+$ git commit -m "Fix wrong condition in makeBigStringFrom"
+
+14.dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+15.dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug1)
+$ nano SILab1Main.java
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug1)
+$ git add SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug1)
+$ git commit -m "Call method filterOddLengthStrings in main class"
+[bug1 46c96ab] Call method filterOddLengthStrings in main class
+ 1 file changed, 1 insertion(+)
+16. dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2
+
+17. dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2)
+$ nano SILab1Main.java
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2)
+$ git add SILab1Main.java
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2)
+$ git commit -m "Call method makeBigStringFrom in main class"
+[bug2 b5bf788] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+18.dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2)
+$ git push -u origin --all
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.25 KiB | 641.00 KiB/s, done.
+Total 12 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), completed with 4 local objects.
+To https://github.com/DamjanSandev/SI_2024_lab1_223245.git
+ * [new branch]      bug1 -> bug1
+ * [new branch]      bug2 -> bug2
+branch 'master' set up to track 'origin/master'.
+branch 'bug1' set up to track 'origin/bug1'.
+branch 'bug2' set up to track 'origin/bug2'.
+
+
+
+
+19.dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+20. dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (master)
+$ git merge bug1
+Updating 3c1a4e4..46c96ab
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 4 ++--
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+21. 
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (master)
+$ git push -u origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/DamjanSandev/SI_2024_lab1_223245.git
+   3c1a4e4..46c96ab  master -> master
+branch 'master' set up to track 'origin/master'.
+
+22. dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+Your branch is up to date with 'origin/bug2'.
+
+23. dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2)
+$ git rebase master
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply b5bf788... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply b5bf788... Call method makeBigStringFrom in main class
+
+24 i 25. 
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2)
+$ git rebase master
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply b5bf788... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply b5bf788... Call method makeBigStringFrom in main class
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2|REBASE 2/2)
+$ git add SILab1Main.java
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2|REBASE 2/2)
+$ nano SILab1Main.java
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2|REBASE 2/2)
+$ git status
+interactive rebase in progress; onto 46c96ab
+Last commands done (2 commands done):
+   pick 6a86ccb Fix wrong condition in makeBigStringFrom
+   pick b5bf788 Call method makeBigStringFrom in main class
+No commands remaining.
+You are currently rebasing branch 'bug2' on '46c96ab'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SILab1Main.java
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1Main.java
+
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2|REBASE 2/2)
+$ nano SILab1Main.java
+y
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2|REBASE 2/2)
+$ git rebase --continue
+You must edit all merge conflicts and then
+mark them as resolved using git add
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2|REBASE 2/2)
+$ git add SILab1Main.java
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2|REBASE 2/2)
+$ git rebase --continue
+[detached HEAD 8a47dcd] Call method makeBigStringFrom in main class
+ 1 file changed, 2 insertions(+)
+Successfully rebased and updated refs/heads/bug2.
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (bug2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+dsand@DESKTOP-RMKLIRR MINGW64 ~/OneDrive/Desktop/SI_2024_lab1_223245 (master)
+$ git merge bug2
+Updating 46c96ab..8a47dcd
+Fast-forward
+ SILab1Main.java | 2 ++
+ SILab1_2.java   | 4 ++--
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+26.git push -u origin master
+
+27. git push -u --force origin bug2
+
+28. posle reklamite :)
+
+
+
+
+ 
